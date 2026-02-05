@@ -1,0 +1,35 @@
+PRODUCTION SETUP GUIDE — LINUX WEB APP WITH GUNICORN + AUTO START
+
+PHASE 1 — FIRST TIME SERVER SETUP
+
+STEP 1: Install Python 3.9 or 3.10 Amazon Linux: sudo yum update -y sudo
+yum install python39 python39-devel -y
+
+Verify: python3.9 –version
+
+STEP 2: Go to your application directory cd /home/ec2-user/web_app
+
+Project structure should look like: web_app/ app.py requirements.txt
+templates/ static/
+
+STEP 3: Create virtual environment python3.9 -m venv venv
+
+Activate: source venv/bin/activate
+
+Verify: which python
+
+STEP 4: Install dependencies pip install –upgrade pip pip install -r
+requirements.txt
+
+
+STEP 5: Reload and start service 
+sudo systemctl daemon-reexec ,
+sudo systemctl daemon-reload ,
+sudo systemctl enable web_app ,
+sudo systemctl start web_app .
+
+
+STEP 6: Verify sudo systemctl status webapp ss -tulnp | grep 5000
+
+After reboot: sudo systemctl status webapp
+
