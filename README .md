@@ -365,6 +365,7 @@ Things I want to add:
 If you have questions about this implementation or want to discuss AWS architecture:
 
 - LinkedIn: [your-profile](https://linkedin.com/in/your-profile)
-- GitHub: [your-username](https://github.com/your-username)
+- GitHub: [wolfking92](https://github.com/wolfking92/aws-autoscaling-webapp)
 - Email: rahulbaswala73@gmail.com
+
 
